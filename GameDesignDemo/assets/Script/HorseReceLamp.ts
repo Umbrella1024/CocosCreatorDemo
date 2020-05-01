@@ -4,7 +4,7 @@
  * @Author: 周曾辉
  * @Date: 2020-04-26 20:19:48
  * @LastEditors: 周曾辉
- * @LastEditTime: 2020-05-01 12:46:11
+ * @LastEditTime: 2020-05-01 13:13:14
  */
 const { ccclass, property } = cc._decorator;
 
@@ -22,22 +22,24 @@ export default class HorseReceLamp extends cc.Component {
     @property(cc.Mask)
     maskNode: cc.Mask = null;
 
-    @property
+    @property({
+        tooltip:"每秒移动多少像素",
+    })
     m_speed: number = 100;
 
     @property
     text: string = 'hello';
 
-
     m_xLeftEnd: number = 0;
-
-
     m_xRightEnd: number = 0;
 
     m_yPos: number = 0;
 
-    @property
+    @property({
+        tooltip:"文字滚动的方向，1是从左到右，2是从右到左",
+    })
     m_direction: number = Direction.LEFT_TO_RIGHT;
+
 
 
     start() {
@@ -57,9 +59,11 @@ export default class HorseReceLamp extends cc.Component {
         }
 
         this.label.node.x = xPos;
+        this.label.node.y = this.m_yPos;
     }
 
     update(dt) {
+        cc.log("dt:" + dt);
         if (this.m_direction === Direction.LEFT_TO_RIGHT) {
             let contentSize = this.label.node.getContentSize();
             if (this.label.node.x >= this.m_xRightEnd) { 
