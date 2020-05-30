@@ -1,11 +1,12 @@
 /*
  * @Description: 
  * @version: 
- * @Author: 周曾辉
- * @Date: 2020-04-26 20:19:48
- * @LastEditors: 周曾辉
- * @LastEditTime: 2020-05-01 13:13:14
+ * @Author: CoderXZ
+ * @Date: 2020-05-01 12:39:00
+ * @LastEditors: CoderXZ
+ * @LastEditTime: 2020-05-02 19:35:52
  */
+
 const { ccclass, property } = cc._decorator;
 
 enum Direction {

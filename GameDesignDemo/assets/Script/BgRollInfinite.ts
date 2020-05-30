@@ -1,11 +1,12 @@
 /*
  * @Description: 
  * @version: 
- * @Author: 周曾辉
- * @Date: 2020-05-01 16:37:46
- * @LastEditors: 周曾辉
- * @LastEditTime: 2020-05-02 00:26:17
+ * @Author: CoderXZ
+ * @Date: 2020-05-02 00:25:39
+ * @LastEditors: CoderXZ
+ * @LastEditTime: 2020-05-02 19:36:09
  */
+
 
 const {ccclass, property} = cc._decorator;
 
